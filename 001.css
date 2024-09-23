@@ -1,0 +1,93 @@
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contacto__titulo {
+    
+    
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 20px;
+}
+
+
+
+
+/* Estilos del formulario */
+.contacto__formulario {
+    max-width: 500px; /* Establece un ancho máximo para el formulario */
+    margin: 0 auto; /* Centra el formulario */
+    padding: 20px;
+    background-color: var(--color-de-texto); /* Fondo claro y limpio */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los campos de entrada */
+.contacto__campo {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 15px;
+    margin-bottom: 15px; /* Espacio entre los campos */
+    border: 1px solid var(--color-de-fondo-menu);
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Fuente un poco más grande */
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+/* Efecto hover y focus */
+.contacto__campo:hover,
+.contacto__campo:focus {
+    border-color: var(--color-de-fondo-menu); /* Cambia el color del borde al interactuar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/* Estilos para el textarea */
+.contacto__campo--textarea {
+    height: 150px; /* Mayor altura para el campo de texto */
+    resize: none; /* Evita que el textarea sea redimensionable */
+}
+
+/* Estilo para el botón */
+.contacto__boton {
+    width: 100%; /* Botón ocupa todo el ancho */
+    padding: 15px;
+    font-size: 1.1rem;
+    color: var(--color-de-texto);
+    background-color: var(--color-de-link); /* Color de fondo azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suave animación en hover */
+}
+
+/* Efecto hover en el botón */
+.contacto__boton:hover {
+    background-color:var(--color-de-fondo); /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Añadir un pequeño mensaje de retroalimentación después del envío */
+.contacto__formulario::after {
+    content: "Nos pondremos en contacto pronto.";
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-de-link); /* Verde para mensaje de éxito */
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
