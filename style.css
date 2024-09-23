@@ -139,7 +139,7 @@ a {
 
 .presentacion__titulo {
     font-size: 2rem;
-    color: var(--color-de-texto));
+    color: var(--color-de-texto);
     margin-bottom: 10px;
 }
 
@@ -306,7 +306,7 @@ a {
 
 .tools__elemento:hover {
     transform: scale(1.1); 
-    background-color: var(--color-de-fondo);  al pasar el mouse */
+    background-color: var(--color-de-fondo);
     border-radius: 10px; 
 }
 
