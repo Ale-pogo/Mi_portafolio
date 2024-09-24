@@ -51,19 +51,13 @@
     width: 100%; 
 }
 
-
-
 body {
     background-color: var(--color-de-fondo);
     font-family: 'Raleway', sans-serif;
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    line-height: 1.6;
-    
-}
-header {
-    background-image: ;
+    line-height: 1.6;    
 }
 
 ol, ul, li {
@@ -225,9 +219,12 @@ a {
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 .habilidades {
-    width: 100%;
+    /*width: 100%;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1.5rem;*/
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
 }
 
 .habilidades__titulo {
@@ -282,7 +279,7 @@ a {
 
 /*------------------------------ Sección de Tools --------------------------------*/
 .tools{
-    width: 100%;
+    /*width: 100%;*/
     align-items: center;
     padding: 1.5rem;
 }
@@ -297,9 +294,7 @@ a {
 .tools__lista{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: ;
-
+    justify-content: space-around;    
 }
 
 .tools__elemento {
@@ -392,7 +387,7 @@ a {
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 .proyectos {
-    width: 100%;
+    /*width: 100%;*/
     align-items: center;
     padding: 1.5rem;
 }
@@ -416,7 +411,7 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%;    
+    /*width: 100%;*/    
 }
 
 .contacto__formulario {
