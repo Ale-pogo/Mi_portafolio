@@ -576,6 +576,10 @@ a {
         font-size: 1.5rem;
     }
 
+    .presentacion__titulo {
+        font-size: 1rem;
+    }
+
     .navegacion__lista {
         display: flex;
         flex-direction: row;
@@ -590,8 +594,11 @@ a {
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
     .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .presentacion__titulo {
         font-size: 1.8rem;
     }
 
