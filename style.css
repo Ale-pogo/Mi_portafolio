@@ -214,6 +214,13 @@ a {
 
 .sobre-mi__texto {
     align-items: center;
+    text-align: justify;    
+}
+
+.sobre-mi__texto br {
+    content: "";
+    display: block;
+    margin-bottom: 18px;
 }
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
