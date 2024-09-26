@@ -56,16 +56,6 @@ a {
     padding: 10px;
 }
 
-
-/*.navegacion__lista {
-    display: none;
-}
-
-.navegacion__elemento a {
-    font-size: 0.9rem;
-}*/
-
-
 .navegacion__lista {
     display: none;
     list-style: none;
@@ -119,6 +109,7 @@ a {
     color: var(--color-de-texto);
     cursor: pointer;
 }
+
 
 /* ------------------------------ Sección Presentación ------------------------------*/
 .presentacion {
@@ -224,9 +215,6 @@ a {
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
-    /*display: flex;
-    flex-direction: column;
-    max-width: 100%;*/
 }
 
 .habilidades__titulo {
@@ -286,9 +274,6 @@ a {
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
-    /*width: 100%;
-    align-items: center;
-    padding: 1.5rem;*/
 }
 
 .tools__titulo {
@@ -348,8 +333,6 @@ a {
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
-    /*padding: 20px;
-    background-color: var(--color-de-fondo);*/
 }
 
 .formacion__titulo {
@@ -389,7 +372,6 @@ a {
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 .proyectos {
-    /*width: 100%;*/
     align-items: center;
     padding: 1.5rem;
 }
@@ -412,8 +394,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    /*width: 100%;*/    
+    padding: 20px;      
 }
 
 .contacto__formulario {
@@ -589,6 +570,38 @@ a {
         height: 120px;        
     }
 
+    /*nuevo*/
+    .redes__img a {
+        display: flex; /* Aseguramos que el ícono quede visible junto al texto si lo hay */
+        align-items: center;
+    }
+
+    .contacto__boton:hover {
+        text-align: center;          
+    }
+      
+    .redes {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+     
+    .redes__img a::before {
+        content: none; /* Eliminar texto antes del ícono si está configurado con ::before */        
+    }
+    
+    .redes__img a span {
+        display: none; /* Ocultamos el texto */        
+    }
+    
+    .redes__img img {
+        margin-left: 0; /* Asegura que las imágenes queden alineadas correctamente */       
+    }
+    
+    
+
+
+
     .formacion__icono {
         width: 150px;
         height: 80px;
@@ -613,6 +626,134 @@ a {
 
     
 }
+/* Responsivo 360px */
 
+@media (max-width: 360px) {
+    :root { 
+        --color-de-fondo: #31363F;
+        --color-de-fondo-menu: #222831;
+        --color-de-link: #76ABAE;
+        --color-de-texto: #EEEEEE;    
+    }
 
+    /* Cabecera */
+    .cabecera {
+        flex-direction: column; /* Alineamos el contenido verticalmente en pantallas pequeñas */
+        justify-content: center;
+        padding: 0.5rem;
+    }
 
+    .cabecera__logo {
+        max-width: 60px; /* Reducimos el tamaño del logo */
+    }
+
+    .cabecera__titulo {
+        font-size: 1rem; /* Disminuimos el tamaño del texto */
+    }
+
+    /* Navegación */
+    .navegacion__toggle {
+        font-size: 1.5rem; /* Ajustamos el tamaño del ícono de menú */
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem; /* Ajustamos el tamaño de los links de navegación */
+        padding: 8px 15px; /* Reducimos el padding */
+    }
+
+    /* Presentación */
+    .presentacion {
+        padding: 20px;
+    }
+
+    .presentacion__foto {
+        width: 100px;
+        height: 100px; /* Reducimos el tamaño de la foto */
+    }
+
+    .presentacion__titulo {
+        font-size: 1.5rem; /* Ajustamos el tamaño del título */
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1rem; /* Ajustamos el subtítulo */
+    }
+
+    /* Redes Sociales */
+    .redes__img img {
+        width: 25px;
+        height: 25px; /* Reducimos el tamaño de los íconos */
+    }
+
+    /* Sección Sobre Mí */
+    .sobre-mi {
+        padding: 1rem; /* Reducimos el padding para evitar espacios grandes */
+    }
+
+    /* Habilidades */
+    .habilidades__icono {
+        width: 60px;
+        height: 60px; /* Reducimos el tamaño de los íconos */
+    }
+
+    .habilidades__nombre {
+        font-size: 1rem; /* Ajustamos el tamaño del texto */
+    }
+
+    /* Tools */
+    .tools__icono {
+        width: 50px;
+        height: 50px; /* Ajustamos el tamaño de los íconos */        
+    }
+    /* Escalar las imágenes .tools__icono */
+    .tools__icono {
+        width: 40px; /* Ajustar el tamaño de las imágenes */
+        height: 40px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Escalar el texto .tools__nombre */
+    .tools__nombre {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+        margin-top: 5px;   /* Reducir el margen superior para mantener proporción */
+        transition: font-size 0.3s ease;
+    }
+
+    /* Ajustar el contenedor de las herramientas */
+    .tools__elemento {
+        padding: 5px; /* Reducir el padding general */
+    }
+
+    /* Si es necesario, ajustar el layout en modo columna */
+    .tools__lista {
+        flex-direction: column; /* Si quieres que los elementos se apilen verticalmente */
+        gap: 10px; /* Añadir un pequeño espacio entre cada herramienta */
+    }
+
+    
+    /* Proyectos */
+    .proyecto__icono {
+        width: 340px;
+    }
+
+    /* Contacto */
+    .contacto__formulario {
+        padding: 10px; /* Reducimos el padding */
+        max-width: 100%; /* Hacemos que ocupe el 100% de la pantalla */
+    }
+
+    .contacto__boton {
+        font-size: 1rem;
+        padding: 10px; /* Reducimos el padding del botón */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer__detalle li {
+        margin: 5px 0; /* Reducimos el espacio entre los elementos de la lista */
+    }
+}
