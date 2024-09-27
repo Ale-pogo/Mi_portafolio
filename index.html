@@ -48,7 +48,7 @@
                 <li class="redes__img"><a href="">Currículo <img src="assets/cv_ico_o.svg" alt="Flecha"></a></li>
             </ul>
         </div>
-    </section>-->
+    </section>-->    
 
     <section class="presentacion">
         <img class="presentacion__foto" src="assets/profile00.png" alt="Foto de perfil">
@@ -196,14 +196,20 @@
         
     </section>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
+    <!-- Sección de Contacto--> 
+    <section class="form-container">
+        <h2>Contáctame</h2>
+        <form class="contactForm" id="contactForm" action="https://formspree.io/f/mblrnlnn" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
         </form>
     </section>
 

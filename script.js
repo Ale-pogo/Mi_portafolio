@@ -1,47 +1,44 @@
-//La validación del formulário con javascript es considerada un desafío extra, no es obligatório realizar esta validación para realizar su entrega
-// Seleccionar el formulario y sus elementos
-const formulario = document.getElementById('formularioContacto');
-const nombreInput = document.getElementById('nombre');
-const emailInput = document.getElementById('email');
-const mensajeInput = document.getElementById('mensaje');
-const formFeedback = document.getElementById('formFeedback');
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevenir el envío por defecto
 
-// Validar email con regex
-function validarEmail(alejandro.casulli@gmail.com) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(alejandro.casulli@gmail.com);
-}
+    const submitButton = document.querySelector('button[type="submit"]');
+    const responseMessage = document.getElementById('responseMessage');
 
-// Escuchar el evento de envío del formulario
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el envío predeterminado
+    // Desactivar el botón de envío y cambiar el texto
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    try {
+        // Obtener los datos del formulario
+        const formData = new FormData(this);
 
-    // Obtener los valores de los campos
-    const nombre = nombreInput.value.trim();
-    const email = emailInput.value.trim();
-    const mensaje = mensajeInput.value.trim();
+        // Enviar los datos a Formspree utilizando fetch
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-    // Validar que los campos no estén vacíos
-    if (nombre === '' || email === '' || mensaje === '') {
-        formFeedback.textContent = 'Todos los campos son obligatorios.';
-        formFeedback.classList.add('error');
-        return;
+        // Manejar la respuesta de Formspree
+        if (response.ok) {
+            responseMessage.textContent = 'Mensaje enviado exitosamente.';
+            responseMessage.style.color = 'green';
+            this.reset(); // Limpiar el formulario
+        } else {
+            responseMessage.textContent = 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.';
+            responseMessage.style.color = 'red';
+        }
+
+    } catch (error) {
+        // Si ocurre un error inesperado, mostrar un mensaje
+        responseMessage.textContent = 'Hubo un problema al enviar el formulario. Error: ' + error.message;
+        responseMessage.style.color = 'red';
+        console.error('Error al enviar el formulario:', error);
     }
 
-    // Validar formato del correo electrónico
-    if (!validarEmail(email)) {
-        formFeedback.textContent = 'Por favor, introduce un correo electrónico válido.';
-        formFeedback.classList.add('error');
-        return;
-    }
-
-    // Si todo es válido, mostrar mensaje de éxito
-    formFeedback.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.';
-    formFeedback.classList.remove('error');
-    formFeedback.classList.add('success');
-
-    // Aquí podrías añadir una lógica para enviar los datos a un servidor o servicio de email.
-
-    // Limpiar el formulario
-    formulario.reset();
+    // Rehabilitar el botón y restaurar el texto después de que el envío haya terminado
+    submitButton.disabled = false;
+    submitButton.textContent = 'Enviar';
 });
