@@ -726,7 +726,8 @@ a {
 
     /* Si es necesario, ajustar el layout en modo columna */
     .tools__lista {
-        flex-direction: column; /* Si quieres que los elementos se apilen verticalmente */
+        flex-direction: row; /* Si quieres que los elementos se apilen verticalmente */
+        
         gap: 10px; /* Añadir un pequeño espacio entre cada herramienta */
     }
 
