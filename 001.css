@@ -398,13 +398,14 @@ a {
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 2rem;
     align-items: center;
     background-color: var(--transparente);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     border-radius: 5px;
+    
 }
 
 .contactForm {
@@ -412,7 +413,7 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: var(--color-de-link);
-    width: 30%;
+    width: 80%;
     margin-bottom: 20px;
 }
 

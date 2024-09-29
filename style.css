@@ -402,7 +402,6 @@ a {
     padding: 2rem;
     align-items: center;
     background-color: var(--color-de-fondo);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     border-radius: 5px;
 }
@@ -412,13 +411,28 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: var(--color-de-link);
-    width: 30%;
+    width: 600px;
     margin-bottom: 20px;
     border-radius: 15px;
     padding: 15px;
-    
-
 }
+
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contactForm textarea {
+    height: 150px;
+    resize: vertical; /* Permitir que el usuario cambie el tamaño vertical */
+}
+
+
 
 h2 {
     text-align: center;
@@ -620,6 +634,35 @@ button:hover {
         width: 150px;
         height: 80px;
     }
+
+/* formulario */
+    .form-container {
+        padding: 10px; /* Reducir el padding para pantallas pequeñas */        
+    }
+
+    .contactForm {
+        gap: 10px; /* Reducir el espacio entre los elementos en pantallas más pequeñas */
+        width: 95%;
+               
+    }
+
+    .contactForm input,
+    .contactForm textarea {
+        font-size: 0.9rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    button[type="submit"] {
+        font-size: 1rem; /* Reducir el tamaño del botón */
+    }
+
+
+
+
+
+
+/* Footer */
+
+
     .footer {
         flex-direction: row;
         justify-content: space-between; 
