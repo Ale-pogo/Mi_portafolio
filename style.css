@@ -33,7 +33,7 @@ a {
 .cabecera {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 15px;
     background-color: var(--color-de-fondo-menu);
@@ -44,12 +44,6 @@ a {
     max-width: 80px; 
 }
 
-.cabecera__titulo {
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--color-de-texto);
-}
-
 .navegacion {
     display: flex;
     flex-direction: row;
@@ -58,12 +52,9 @@ a {
 }
 
 .navegacion__lista {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    gap: 2rem;
 }
 
 .navegacion__elemento {
@@ -101,16 +92,11 @@ a {
 }
 
 
-/*nav toggle*/
-.navegacion__toggle {
+.abrir__menu,
+.cerrar__menu {
     display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-de-texto);
-    cursor: pointer;
+    
 }
-
 
 /* ------------------------------ Sección Presentación ------------------------------*/
 .presentacion {
@@ -545,37 +531,50 @@ button:hover {
 /* Responsivo 768px */
 @media (max-width: 768px) {
     .cabecera {
-        flex-direction: row;        
+        flex-direction: row;
+        align-items: end;            
     }
 
-    /*nav toggle*/
-    .navegacion__lista {
-        display: none;
-        flex-direction: column;
-        background-color: var(--color-de-fondo-menu);
-        position: absolute;
-        top: 60px; /* Ajusta según la altura del header */
-        left: 0;
-        width: 100%;
-        padding: 1rem 0;
-        z-index: 1000;
-    }
-
-    /* Mostrar el ícono de menú hamburguesa */
-    .navegacion__toggle {
+    .abrir__menu,
+    .cerrar__menu {
         display: block;
-        color: aliceblue;
+        border: 0;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: var(--transparente);
     }
 
-    /* Estilo para los elementos del menú en el desplegable */
-    .navegacion__elemento {
-        text-align: center;
-        margin: 0.5rem 0;
+    .abrir__menu {
+        color: var(--transparente);
     }
 
-    /* Mostrar el menú cuando esté activo */
-    .navegacion__lista.activo {
+    .cerrar__menu {
+        color: var(--transparente);
+    }
+
+    .navegacion {
+        opacity: 0;
+        visibility: hidden;
         display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-de-fondo-menu);
+        padding: 2rem;
+    }
+    .navegacion.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    
+    .navegacion__lista {
+        flex-direction: column;
+        align-items: end;
     }
 
 

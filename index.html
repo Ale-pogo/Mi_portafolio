@@ -17,11 +17,13 @@
     <!-- Menú -->
     <header class="cabecera">
         <img class="cabecera__logo" src="assets/jeti.svg" alt="Logo">
-        <h1 class="cabecera__titulo">Casulli H. Alejandro</h1>
-        <nav class="navegacion">
-            <button class="navegacion__toggle" aria-label="Abrir menú"></button>
-                ☰
-            </button>
+        <button id="abrir" class="abrir__menu">
+            <img src="/assets/menu.png" alt="">
+        </button>
+        <nav id="navegacion" class="navegacion">
+            <button id="cerrar" class="cerrar__menu">
+                <img src="/assets/x.png" alt="">
+            </button>           
             <ul class="navegacion__lista">
                 <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
                 <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
@@ -212,8 +214,3 @@
 </body>
     <script src="script.js"></script>
 </html>
-<script>
-    document.querySelector('.navegacion__toggle').addEventListener('click', function() {
-        document.querySelector('.navegacion__lista').classList.toggle('activo');
-    });
-</script>
