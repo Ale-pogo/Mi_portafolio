@@ -25,20 +25,20 @@ document.getElementById('contactForm').addEventListener('submit', async function
         if (response.ok) {
             responseMessage.textContent = 'Mensaje enviado exitosamente.';
             responseMessage.style.color = 'green';
-            this.reset(); // Limpiar el formulario
         } else {
             responseMessage.textContent = 'Error al enviar el mensaje. Por favor, inténtalo nuevamente.';
             responseMessage.style.color = 'red';
         }
 
     } catch (error) {
-        // Si ocurre un error inesperado, mostrar un mensaje
+        // Mostrar error si algo falla
         responseMessage.textContent = 'Hubo un problema al enviar el formulario. Error: ' + error.message;
         responseMessage.style.color = 'red';
         console.error('Error al enviar el formulario:', error);
+    } finally {
+        // Asegurarse de que el botón siempre se rehabilita y el texto se restablece
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar';
+        this.reset(); // Limpiar el formulario
     }
-
-    // Rehabilitar el botón y restaurar el texto después de que el envío haya terminado
-    submitButton.disabled = false;
-    submitButton.textContent = 'Enviar';
 });
