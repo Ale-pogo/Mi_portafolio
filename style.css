@@ -642,7 +642,7 @@ button:hover {
 
     .contactForm {
         gap: 10px; /* Reducir el espacio entre los elementos en pantallas más pequeñas */
-        width: 95%;
+        width: 80%;
                
     }
 
