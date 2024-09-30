@@ -136,11 +136,20 @@ a {
     margin-bottom: 10px;
 }
 
-.presentacion__subtitulo {
+.presentacion__texto {
     font-size: 1.2rem;
     color: var(--color-de-link);
     margin-bottom: 20px;
+    align-items: center;
+    text-align: justify;
 }
+
+.presentacion__texto br {
+    content: "";
+    display: block;
+    margin-bottom: 25px;
+}
+
 
 .redes {
     display: flex;
@@ -197,6 +206,10 @@ a {
     content: "";
     display: block;
     margin-bottom: 18px;
+}
+
+.sobre-mi__titulo {
+    
 }
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
@@ -357,7 +370,7 @@ a {
 }
 
 .formacion__icono:hover {
-    transform: scale(1.2); 
+    transform: scale(1.24); 
 }
 
 
