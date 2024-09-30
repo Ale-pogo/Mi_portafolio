@@ -28,7 +28,6 @@ a {
     color: var(--color-de-link);
 }
 
-
 /* ------------------------------ Sección Cabecera -------------------------------*/
 .cabecera {
     display: flex;
@@ -38,7 +37,6 @@ a {
     padding: 15px;
     background-color: var(--color-de-fondo-menu);
     background-image: url('assets/header-banner.png');
-
 }
 
 .cabecera__logo {
@@ -95,8 +93,7 @@ a {
 
 .abrir__menu,
 .cerrar__menu {
-    display: none;
-    
+    display: none;    
 }
 
 /* ------------------------------ Sección Presentación ------------------------------*/
@@ -108,8 +105,7 @@ a {
     background-color: var(--color-de-fondo); 
     border-radius: 10px;
     max-width: 1200px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
 
 .presentacion__foto {
@@ -191,15 +187,15 @@ a {
     align-items: center;
     padding: 3rem; 
     display: grid;
-    grid-template-columns: 1fr; /* Una columna centrada */
-    gap: 10px;                  /* Espacio entre elementos */ 
+    grid-template-columns: 1fr; 
+    gap: 10px; 
 }
 
 .sobre-mi__titulo {
-    text-align: center;   /* Centramos el texto del título */
-    font-weight: bold;    /* Mantiene el énfasis en el título */
-    margin-bottom: 10px;  /* Espacio inferior para separar del párrafo */
-    margin-top: 30px;     /* Espacio superior para separar del contenido anterior */
+    text-align: center;   
+    font-weight: bold;    
+    margin-bottom: 10px;  
+    margin-top: 30px;     
 }
 
 .sobre-mi__texto {
@@ -208,13 +204,14 @@ a {
 }
 
 .sobre-mi__texto ul {
-    padding-left: 20px;   /* Espacio a la izquierda para las listas */
-    margin-bottom: 20px;  /* Separar las listas del texto inferior */
+    padding-left: 20px;   
+    margin-bottom: 20px;
 }
 
 .sobre-mi__texto li {
-    margin-bottom: 10px;  /* Espacio entre los elementos de la lista */
+    margin-bottom: 10px;
 }
+
 .sobre-mi__texto br {
     content: "";
     display: block;
@@ -222,9 +219,9 @@ a {
 }
 
 .sobre-mi__firma {
-    display: block;       /* Asegura que el elemento sea un bloque, para que se comporte correctamente */
-    margin: 20px auto;    /* Centramos el elemento horizontalmente */
-    width: auto;          /* Ajusta el ancho de la firma si es necesario */
+    display: block;  
+    margin: 20px auto; 
+    width: auto; 
 }
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
@@ -285,7 +282,6 @@ a {
     color: var(--color-de-link); 
 }
 
-
 /*------------------------------ Sección de Tools --------------------------------*/
 .tools{
     background-color: var(--color-de-fondo-menu);
@@ -345,7 +341,6 @@ a {
     color: var(--color-de-link); 
 }
 
-
 /*------------------------------ Sección de Formacion Academica --------------------------------*/
 .formacion {
     display: flex;
@@ -367,6 +362,7 @@ a {
     gap: 30px;
     margin-bottom: 20px;
 }
+
 .formacion__lista {
     padding: 0;
 }
@@ -387,7 +383,6 @@ a {
 .formacion__icono:hover {
     transform: scale(1.24); 
 }
-
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 .proyectos {
@@ -432,7 +427,6 @@ a {
     padding: 15px;
 }
 
-
 .contactForm input,
 .contactForm textarea {
     width: 100%;
@@ -444,10 +438,8 @@ a {
 
 .contactForm textarea {
     height: 150px;
-    resize: vertical; /* Permitir que el usuario cambie el tamaño vertical */
+    resize: vertical; 
 }
-
-
 
 h2 {
     text-align: center;
@@ -468,8 +460,8 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    outline: none; /* Elimina el contorno interior */
-    border: 1px solid var(--color-de-fondo) /* Puedes ajustar el borde para que sea consistente */
+    outline: none; 
+    border: 1px solid var(--color-de-fondo) 
 }
 
 button {
@@ -555,7 +547,6 @@ button:hover {
     margin-left: 5px;
 }
 
-
 /* ------------------------------ Responsividad ---------------------------------------*/
 /* Responsivo 768px */
 @media (max-width: 768px) {
@@ -563,7 +554,7 @@ button:hover {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        align-content: center;            
+        align-content: center;                  
     }
 
     .abrir__menu,
@@ -572,8 +563,7 @@ button:hover {
         border: 0;
         font-size: 1.25rem;
         cursor: pointer;
-        background-color: var(--transparente);
-        
+        background-color: var(--transparente);        
     }
 
     .abrir__menu {
@@ -585,7 +575,7 @@ button:hover {
     }
     .abrir__menu:hover, .cerrar__menu:hover {
         background-color: var(--transparente);
-      }
+    }
 
     .navegacion {
         opacity: 0;
@@ -601,17 +591,16 @@ button:hover {
         background-color: var(--color-de-fondo-menu);
         padding: 2rem;
     }
+
     .navegacion.visible {
         opacity: 1;
         visibility: visible;
     }
 
-    
     .navegacion__lista {
         flex-direction: column;
         align-items: flex-end;
     }
-
 
     .presentacion {
         flex-direction: column; 
@@ -628,9 +617,8 @@ button:hover {
         height: 120px;        
     }
 
-    /*nuevo*/
     .redes__img a {
-        display: flex; /* Aseguramos que el ícono quede visible junto al texto si lo hay */
+        display: flex; 
         align-items: center;
     }
 
@@ -645,25 +633,22 @@ button:hover {
     }
      
     .redes__img a::before {
-        content: none; /* Eliminar texto antes del ícono si está configurado con ::before */        
+        content: none;  
     }
     
     .redes__img a span {
-        display: none; /* Ocultamos el texto */        
+        display: none;       
     }
     
     .redes__img img {
-        margin-left: 0; /* Asegura que las imágenes queden alineadas correctamente */       
+        margin-left: 0; 
     }
     
-    
-
-
-
     .formacion__icono {
         width: 150px;
         height: 80px;
     }
+
     .formacion__alura {
         width: 150px;
         height: 80px;
@@ -671,32 +656,24 @@ button:hover {
 
 /* formulario */
     .form-container {
-        padding: 10px; /* Reducir el padding para pantallas pequeñas */        
+        padding: 10px;       
     }
 
     .contactForm {
-        gap: 10px; /* Reducir el espacio entre los elementos en pantallas más pequeñas */
-        width: 80%;
-               
+        gap: 10px; 
+        width: 80%;               
     }
 
     .contactForm input,
     .contactForm textarea {
-        font-size: 0.9rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+        font-size: 0.9rem; 
     }
 
     button[type="submit"] {
-        font-size: 1rem; /* Reducir el tamaño del botón */
+        font-size: 1rem; 
     }
 
-
-
-
-
-
 /* Footer */
-
-
     .footer {
         flex-direction: row;
         justify-content: space-between; 
@@ -713,23 +690,20 @@ button:hover {
         margin: 10px 0; 
     }
 
-    /* Reducir el tamaño del título */
     .footer__titulo {
         font-size: 1rem;
     }
 
-    /* Ocultar el texto de los enlaces en redes sociales, dejando solo las imágenes */
     .redes__img a {
         font-size: 0;
     }
 
     .redes__img img {
-        margin-left: 20px;
-        
-    }
-
-    
+        margin-left: 20px;        
+    }    
 }
+
+
 /* Responsivo 360px */
 
 @media (max-width: 360px) {
@@ -748,21 +722,21 @@ button:hover {
     }
 
     .cabecera__logo {
-        max-width: 60px; /* Reducimos el tamaño del logo */
+        max-width: 60px; 
     }
 
     .cabecera__titulo {
-        font-size: 1rem; /* Disminuimos el tamaño del texto */
+        font-size: 1rem; 
     }
 
     /* Navegación */
     .navegacion__toggle {
-        font-size: 1.5rem; /* Ajustamos el tamaño del ícono de menú */
+        font-size: 1.5rem; 
     }
 
     .navegacion__elemento a {
-        font-size: 1rem; /* Ajustamos el tamaño de los links de navegación */
-        padding: 8px 15px; /* Reducimos el padding */
+        font-size: 1rem; 
+        padding: 8px 15px;
     }
 
     /* Presentación */
@@ -772,69 +746,64 @@ button:hover {
 
     .presentacion__foto {
         width: 100px;
-        height: 100px; /* Reducimos el tamaño de la foto */
+        height: 100px; 
     }
 
     .presentacion__titulo {
-        font-size: 1.5rem; /* Ajustamos el tamaño del título */
+        font-size: 1.5rem; 
     }
 
     .presentacion__subtitulo {
-        font-size: 1rem; /* Ajustamos el subtítulo */
+        font-size: 1rem;
     }
 
     /* Redes Sociales */
     .redes__img img {
         width: 25px;
-        height: 25px; /* Reducimos el tamaño de los íconos */
+        height: 25px; 
     }
 
     /* Sección Sobre Mí */
     .sobre-mi {
-        padding: 1rem; /* Reducimos el padding para evitar espacios grandes */
+        padding: 1rem; 
     }
 
     /* Habilidades */
     .habilidades__icono {
         width: 60px;
-        height: 60px; /* Reducimos el tamaño de los íconos */
+        height: 60px; 
     }
 
     .habilidades__nombre {
-        font-size: 1rem; /* Ajustamos el tamaño del texto */
+        font-size: 1rem; 
     }
 
     /* Tools */
     .tools__icono {
         width: 50px;
-        height: 50px; /* Ajustamos el tamaño de los íconos */        
+        height: 50px;         
     }
-    /* Escalar las imágenes .tools__icono */
+    
     .tools__icono {
-        width: 40px; /* Ajustar el tamaño de las imágenes */
+        width: 40px; 
         height: 40px;
         transition: transform 0.3s ease;
     }
 
-    /* Escalar el texto .tools__nombre */
     .tools__nombre {
-        font-size: 0.9rem; /* Reducir el tamaño del texto */
-        margin-top: 5px;   /* Reducir el margen superior para mantener proporción */
+        font-size: 0.9rem; 
+        margin-top: 5px;   
         transition: font-size 0.3s ease;
     }
 
-    /* Ajustar el contenedor de las herramientas */
     .tools__elemento {
-        padding: 5px; /* Reducir el padding general */
+        padding: 5px;
     }
 
-    /* Si es necesario, ajustar el layout en modo columna */
     .tools__lista {
-        flex-direction: row; /* Si quieres que los elementos se apilen verticalmente */
-        
-        gap: 10px; /* Añadir un pequeño espacio entre cada herramienta */
+        flex-direction: row; 
+        gap: 10px; 
     }
-
     
     /* Proyectos */
     .proyecto__icono {
@@ -843,13 +812,13 @@ button:hover {
 
     /* Contacto */
     .contacto__formulario {
-        padding: 10px; /* Reducimos el padding */
-        max-width: 100%; /* Hacemos que ocupe el 100% de la pantalla */
+        padding: 10px;
+        max-width: 100%; 
     }
 
     .contacto__boton {
         font-size: 1rem;
-        padding: 10px; /* Reducimos el padding del botón */
+        padding: 10px; 
     }
 
     /* Footer */
@@ -859,6 +828,6 @@ button:hover {
     }
 
     .footer__detalle li {
-        margin: 5px 0; /* Reducimos el espacio entre los elementos de la lista */
+        margin: 5px 0; 
     }
 }
