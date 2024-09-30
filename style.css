@@ -209,8 +209,10 @@ a {
 }
 
 .sobre-mi__titulo {
-    
+    font-weight: bold; /* Grosor de la fuente */
 }
+
+
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 .habilidades {
