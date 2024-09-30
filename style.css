@@ -189,30 +189,43 @@ a {
     flex-direction:column;
     box-sizing: border-box;
     align-items: center;
-    padding: 2rem;  
+    padding: 3rem; 
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna centrada */
+    gap: 10px;                  /* Espacio entre elementos */ 
 }
 
 .sobre-mi__titulo {
-    display: flex;
-    align-items: center;    
+    text-align: center;   /* Centramos el texto del título */
+    font-weight: bold;    /* Mantiene el énfasis en el título */
+    margin-bottom: 10px;  /* Espacio inferior para separar del párrafo */
+    margin-top: 30px;     /* Espacio superior para separar del contenido anterior */
 }
 
 .sobre-mi__texto {
     align-items: center;
-    text-align: justify;    
+    text-align: justify;  
 }
 
+.sobre-mi__texto ul {
+    padding-left: 20px;   /* Espacio a la izquierda para las listas */
+    margin-bottom: 20px;  /* Separar las listas del texto inferior */
+}
+
+.sobre-mi__texto li {
+    margin-bottom: 10px;  /* Espacio entre los elementos de la lista */
+}
 .sobre-mi__texto br {
     content: "";
     display: block;
     margin-bottom: 18px;
 }
 
-.sobre-mi__titulo {
-    font-weight: bold; /* Grosor de la fuente */
+.sobre-mi__firma {
+    display: block;       /* Asegura que el elemento sea un bloque, para que se comporte correctamente */
+    margin: 20px auto;    /* Centramos el elemento horizontalmente */
+    width: auto;          /* Ajusta el ancho de la firma si es necesario */
 }
-
-
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 .habilidades {
