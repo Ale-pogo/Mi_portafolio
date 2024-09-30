@@ -714,8 +714,8 @@ button:hover {
 
     /* Cabecera */
     .cabecera {
-        flex-direction: column; /* Alineamos el contenido verticalmente en pantallas pequeñas */
-        justify-content: center;
+        flex-direction: row; 
+        justify-content: space-between;
         padding: 0.5rem;
     }
 
