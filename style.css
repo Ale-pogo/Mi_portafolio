@@ -38,6 +38,7 @@ a {
     padding: 15px;
     background-color: var(--color-de-fondo-menu);
     background-image: url('assets/header-banner.png');
+
 }
 
 .cabecera__logo {
@@ -532,7 +533,9 @@ button:hover {
 @media (max-width: 768px) {
     .cabecera {
         flex-direction: row;
-        align-items: end;            
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;            
     }
 
     .abrir__menu,
@@ -542,6 +545,7 @@ button:hover {
         font-size: 1.25rem;
         cursor: pointer;
         background-color: var(--transparente);
+        
     }
 
     .abrir__menu {
@@ -551,6 +555,9 @@ button:hover {
     .cerrar__menu {
         color: var(--transparente);
     }
+    .abrir__menu:hover, .cerrar__menu:hover {
+        background-color: var(--transparente);
+      }
 
     .navegacion {
         opacity: 0;
@@ -574,7 +581,7 @@ button:hover {
     
     .navegacion__lista {
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
     }
 
 
