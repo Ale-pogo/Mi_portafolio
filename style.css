@@ -569,6 +569,7 @@ button:hover {
 
     .abrir__menu {
         color: var(--transparente);
+        background-color: var(--transparente);
         width: 20%;
         display: block;
         font-size: 1.25rem;
@@ -578,6 +579,7 @@ button:hover {
 
     .cerrar__menu {
         color: var(--transparente);
+        background-color: var(--transparente);
         width: 70%;
         display: block;
         font-size: 1.25rem;
