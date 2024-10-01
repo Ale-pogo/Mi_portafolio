@@ -552,26 +552,37 @@ button:hover {
 @media (max-width: 768px) {
     .cabecera {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         align-content: center;                  
     }
 
-    .abrir__menu,
+    /*.abrir__menu,
     .cerrar__menu {
         display: block;
+        width: 20%;
         border: 0;
         font-size: 1.25rem;
         cursor: pointer;
         background-color: var(--transparente);        
-    }
+    }*/
 
     .abrir__menu {
         color: var(--transparente);
+        width: 20%;
+        display: block;
+        font-size: 1.25rem;
+        cursor: pointer;
+        border: 0;
     }
 
     .cerrar__menu {
         color: var(--transparente);
+        width: 70%;
+        display: block;
+        font-size: 1.25rem;
+        cursor: pointer;
+        border: 0;
     }
     .abrir__menu:hover, .cerrar__menu:hover {
         background-color: var(--transparente);
