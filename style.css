@@ -46,14 +46,15 @@ a {
 .navegacion {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px;
 }
 
 .navegacion__lista {
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 0.1rem;
+    flex-wrap: wrap; /* ver en pantalla pequeña*/
 }
 
 .navegacion__elemento {
