@@ -37,6 +37,8 @@ a {
     padding: 15px;
     background-color: var(--color-de-fondo-menu);
     background-image: url('assets/header-banner.png');
+
+    
 }
 
 .cabecera__logo {
@@ -107,6 +109,8 @@ a {
     border-radius: 10px;
     max-width: 1200px;
     margin: 0 auto;    
+
+    
 }
 
 .presentacion__foto {
@@ -125,6 +129,7 @@ a {
 
 .presentacion__contenedor {
     margin-left: 20px;
+    
 }
 
 .presentacion__titulo {
@@ -225,11 +230,72 @@ a {
     width: auto; 
 }
 
-/*------------------------------ Sección de Habilidades ------------------------------*/
+/*------------------------------ Sección de Skills ------------------------------*/
 .habilidades {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 2rem;
+}
+
+.habilidades__titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a una nueva línea */
+    justify-content: center; /* Centra los elementos en cada fila */
+    gap: 1rem; /* Espacio entre los elementos */
+    padding: 0;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 150px; /* Define un ancho para controlar el comportamiento responsivo */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.habilidades__elemento:hover {
+    transform: scale(1.1); 
+    background-color: var(--color-de-fondo); 
+    border-radius: 10px; 
+}
+
+.habilidades__icono {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.habilidades__elemento:hover .habilidades__icono {
+    transform: scale(1.2);
+}
+
+.habilidades__nombre {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--color-de-texto);
+    transition: color 0.3s ease;
+}
+
+.habilidades__elemento:hover .habilidades__nombre {
+    color: var(--color-de-link); 
+}
+
+
+
+/* .habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 2rem;
 }
 
@@ -281,7 +347,7 @@ a {
 
 .habilidades__elemento:hover .habilidades__nombre {
     color: var(--color-de-link); 
-}
+} */
 
 /*------------------------------ Sección de Tools --------------------------------*/
 .tools{
@@ -301,7 +367,7 @@ a {
 
 .tools__lista{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around; 
     padding: 0;   
 }
@@ -317,7 +383,7 @@ a {
 
 .tools__elemento:hover {
     transform: scale(1.1); 
-    background-color: var(--color-de-fondo);
+    background-color: var(--color-de-fondo-menu);
     border-radius: 10px; 
 }
 
@@ -403,6 +469,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.proyecto__icono:hover {
+    transform: scale(1.1); 
 }
     
 /*------------------------------ Sección de Contacto ---------------------------------*/
