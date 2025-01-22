@@ -383,7 +383,7 @@ a {
 
 .tools__elemento:hover {
     transform: scale(1.1); 
-    background-color: var(--color-de-fondo-menu);
+    background-color: var(--transparente);
     border-radius: 10px; 
 }
 
