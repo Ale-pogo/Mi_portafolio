@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <!-- Menú -->
     <header class="cabecera">
         <img class="cabecera__logo" src="assets/logo.svg" alt="Logo">
@@ -243,41 +244,77 @@
 
     <!-- Sección de Proyectos -->
     <section class="proyectos" id="proyectos">
-        <h2 class="proyectos__titulo">Proyectos</h2>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Encriptador de texto.</h3>
-            <p class="proyectos__descripcion">Challenge "Alura Latan" - html / css / js.</p>
-            <a href="https://ale-pogo.github.io/alura-encriptador/" target="_blank">
-                <img class="proyecto__icono" src="assets/Encriptador.png" alt="UFRJ">
-            </a>
-        </div>
-       
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Portafolio</h3>
-            <p class="proyectos__descripcion">Challenge "Alura Latan" - html / css / js.</p>
-            <a href="https://ale-pogo.github.io/Mi_portafolio/" target="_blank">
-                <img class="proyecto__icono" src="assets/portafolio.png" alt="UFRJ">
-            </a>
+        <div class="proyectos__encabezado">
+            <p class="seccion__eyebrow">PORTAFOLIO SELECCIONADO</p>
+            <h2 class="proyectos__titulo">Proyectos destacados</h2>
         </div>
 
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Alura Geek.</h3>
-            <p class="proyectos__descripcion">Challenge "Alura Latan" - html / css / js / json-server / mockapi</p>
-            <a href=" https://ale-pogo.github.io/geek/" target="_blank">
-                <img class="proyecto__icono" src="assets/aluraGeek.png" alt="UFRJ">
-            </a>
-        </div>
+        <div class="proyectos__carrusel" aria-roledescription="carousel" aria-label="Proyectos destacados">
+            <button class="carrusel__control carrusel__control--prev" type="button" aria-label="Proyecto anterior">
+                <span aria-hidden="true">←</span>
+            </button>
 
-        </div>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Alura Metal</h3>
-            <p class="proyectos__descripcion">Challenge "Alura Latan" - html / css / React / Vite / json-server /
-                mockapi</p>
-            <a href="https://ale-pogo.github.io/alura-flix/" target="_blank">
-                <img class="proyecto__icono" src="assets/aluraflix.png" alt="UFRJ">
-            </a>
-        </div>
+            <div class="proyectos__viewport">
+                <div class="proyectos__track">
+                    <article class="proyectos__contenedor">
+                        <a class="proyecto__imagen" href="https://ale-pogo.github.io/alura-encriptador/" target="_blank" rel="noopener noreferrer">
+                            <img class="proyecto__icono" src="assets/Encriptador.png" alt="Vista previa del Encriptador de texto">
+                        </a>
+                        <div class="proyectos__contenido">
+                            <div><span class="proyectos__numero">01</span><span class="proyectos__tag">Aplicación web</span></div>
+                            <h3 class="proyectos__nombre">Encriptador de texto</h3>
+                            <p class="proyectos__descripcion">Challenge Alura Latam para cifrar, descifrar y copiar mensajes con una interfaz clara y adaptable.</p>
+                            <ul class="proyectos__tecnologias"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="proyectos__link" href="https://ale-pogo.github.io/alura-encriptador/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+                        </div>
+                    </article>
 
+                    <article class="proyectos__contenedor">
+                        <a class="proyecto__imagen" href="https://ale-pogo.github.io/Mi_portafolio/" target="_blank" rel="noopener noreferrer">
+                            <img class="proyecto__icono" src="assets/portafolio.png" alt="Vista previa de este portafolio">
+                        </a>
+                        <div class="proyectos__contenido">
+                            <div><span class="proyectos__numero">02</span><span class="proyectos__tag">Portafolio personal</span></div>
+                            <h3 class="proyectos__nombre">Mi portafolio</h3>
+                            <p class="proyectos__descripcion">Sitio profesional responsive que presenta mi trayectoria, formación, herramientas y trabajos destacados.</p>
+                            <ul class="proyectos__tecnologias"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="proyectos__link" href="https://ale-pogo.github.io/Mi_portafolio/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="proyectos__contenedor">
+                        <a class="proyecto__imagen" href="https://ale-pogo.github.io/geek/" target="_blank" rel="noopener noreferrer">
+                            <img class="proyecto__icono" src="assets/aluraGeek.png" alt="Vista previa de Alura Geek">
+                        </a>
+                        <div class="proyectos__contenido">
+                            <div><span class="proyectos__numero">03</span><span class="proyectos__tag">Catálogo dinámico</span></div>
+                            <h3 class="proyectos__nombre">Alura Geek</h3>
+                            <p class="proyectos__descripcion">Catálogo interactivo con consumo de API, productos, formularios y persistencia de información.</p>
+                            <ul class="proyectos__tecnologias"><li>JavaScript</li><li>CSS</li><li>MockAPI</li></ul>
+                            <a class="proyectos__link" href="https://ale-pogo.github.io/geek/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="proyectos__contenedor">
+                        <a class="proyecto__imagen" href="https://ale-pogo.github.io/alura-flix/" target="_blank" rel="noopener noreferrer">
+                            <img class="proyecto__icono" src="assets/aluraflix.png" alt="Vista previa de Alura Flix">
+                        </a>
+                        <div class="proyectos__contenido">
+                            <div><span class="proyectos__numero">04</span><span class="proyectos__tag">SPA React</span></div>
+                            <h3 class="proyectos__nombre">Alura Metal</h3>
+                            <p class="proyectos__descripcion">Biblioteca audiovisual desarrollada con React y Vite, rutas dinámicas y gestión de contenido.</p>
+                            <ul class="proyectos__tecnologias"><li>React</li><li>Vite</li><li>MockAPI</li></ul>
+                            <a class="proyectos__link" href="https://ale-pogo.github.io/alura-flix/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <button class="carrusel__control carrusel__control--next" type="button" aria-label="Proyecto siguiente">
+                <span aria-hidden="true">→</span>
+            </button>
+            <div class="carrusel__dots" role="tablist" aria-label="Seleccionar proyecto"></div>
+        </div>
     </section>
 
     <!-- Sección de Contacto-->
@@ -294,6 +331,7 @@
             <textarea id="message" name="message" required></textarea>
 
             <button type="submit">Enviar</button>
+            <p id="responseMessage" aria-live="polite"></p>
         </form>
     </section>
 

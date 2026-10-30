@@ -574,6 +574,17 @@ button:hover {
     margin: 0;    
 }
 
+.footer > .proyecto__icono {
+    width: 140px;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+.footer > .proyecto__icono:hover {
+    transform: none;
+}
+
 .footer__navegacion {
     display: flex;
 }
@@ -616,6 +627,222 @@ button:hover {
     width: 24px;
     height: 24px;
     margin-left: 5px;
+}
+
+/* ------------------------------ Transiciones entre secciones ---------------------------------------*/
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 3px;
+    pointer-events: none;
+}
+.scroll-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-de-link), #b5f2f2);
+    box-shadow: 0 0 14px rgba(118, 208, 212, .85);
+}
+
+body.reveal-ready main > section,
+body.reveal-ready > section {
+    position: relative;
+}
+
+body.reveal-ready > section:not(.presentacion) {
+    opacity: .18;
+    filter: blur(5px);
+    transform: translateY(42px);
+    transition: opacity .85s ease, transform .85s cubic-bezier(.22,.61,.36,1), filter .85s ease;
+}
+
+body.reveal-ready > section.section-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+section:not(.presentacion)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(78%, 920px);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(118, 208, 212, .65), transparent);
+    box-shadow: 0 0 22px rgba(118, 208, 212, .12);
+}
+
+section.section-visible h2 {
+    animation: sectionTitleIn .75s .12s both cubic-bezier(.22,.61,.36,1);
+}
+
+section.section-visible > ul,
+section.section-visible > .formacion_contenedor,
+section.section-visible > .proyectos__encabezado {
+    animation: sectionContentIn .8s .22s both cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes sectionTitleIn {
+    from { opacity: 0; transform: translateY(18px); letter-spacing: .08em; }
+    to { opacity: 1; transform: translateY(0); letter-spacing: normal; }
+}
+
+@keyframes sectionContentIn {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------ Presencia visual ---------------------------------------*/
+html { scroll-behavior: smooth; }
+
+:root {
+    --color-de-fondo: #0f1720;
+    --color-de-fondo-menu: #111a24;
+    --color-de-link: #76d0d4;
+    --color-de-texto: #f4f7f8;
+}
+
+body {
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 15% 10%, rgba(118, 171, 174, .12), transparent 22rem),
+        radial-gradient(circle at 85% 35%, rgba(118, 171, 174, .08), transparent 25rem);
+}
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    background-color: rgba(17, 26, 36, .92);
+    border-bottom: 1px solid rgba(118, 171, 174, .14);
+}
+
+.presentacion {
+    min-height: 560px;
+    max-width: 1180px;
+    gap: 3rem;
+}
+
+.presentacion__foto {
+    width: 280px;
+    height: 280px;
+    border: 6px solid rgba(118, 171, 174, .18);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .35), 0 0 0 12px rgba(118, 171, 174, .04);
+}
+
+.presentacion__contenedor { margin-left: 0; max-width: 760px; }
+.presentacion__titulo { font-size: clamp(2rem, 5vw, 4.1rem); line-height: 1.05; }
+.presentacion__texto { font-size: 1rem; line-height: 1.85; }
+
+.habilidades__elemento,
+.tools__elemento,
+.formacion__icono {
+    border: 1px solid rgba(118, 171, 174, .12);
+    border-radius: 14px;
+}
+
+/* ------------------------------ Carrusel de proyectos ---------------------------------------*/
+.proyectos {
+    position: relative;
+    padding: clamp(3rem, 7vw, 6rem) 5%;
+    overflow: hidden;
+}
+
+.proyectos__encabezado { max-width: 1180px; margin: 0 auto 2rem; text-align: left; }
+.seccion__eyebrow { color: var(--color-de-link); letter-spacing: .22em; font-size: .75rem; font-weight: bold; margin-bottom: .25rem; }
+.proyectos__titulo { margin: 0; font-size: clamp(2rem, 5vw, 3.6rem); justify-content: flex-start; }
+.proyectos__carrusel { position: relative; max-width: 1180px; margin: 0 auto; }
+.proyectos__viewport { overflow: hidden; border-radius: 24px; }
+.proyectos__track { display: flex; transition: transform .7s cubic-bezier(.22,.61,.36,1); }
+
+.proyectos__contenedor {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    min-height: 470px;
+    overflow: hidden;
+    background: #172430;
+    border: 1px solid rgba(118, 171, 174, .16);
+    border-radius: 24px;
+    box-shadow: 0 30px 70px rgba(0,0,0,.28);
+}
+
+.proyecto__imagen { overflow: hidden; display: block; background: #0b1118; }
+.proyecto__icono { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.proyectos__contenedor:hover .proyecto__icono { transform: scale(1.035); }
+.proyectos__contenido { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.5rem, 4vw, 3.5rem); }
+.proyectos__contenido > div { display: flex; align-items: center; gap: 1rem; }
+.proyectos__numero { color: var(--color-de-link); font-size: 2rem; font-weight: bold; }
+.proyectos__tag { border-left: 1px solid rgba(118,171,174,.35); padding-left: 1rem; color: #b9c6ca; text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; }
+.proyectos__nombre { color: var(--color-de-texto); font-size: clamp(1.7rem, 3vw, 2.65rem); line-height: 1.1; margin: 1rem 0; text-align: left; }
+.proyectos__descripcion { color: #b7c3c6; line-height: 1.7; margin: 0 0 1.25rem; }
+.proyectos__tecnologias { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.75rem; padding: 0; }
+.proyectos__tecnologias li { border: 1px solid rgba(118,171,174,.2); border-radius: 999px; padding: .35rem .75rem; font-size: .78rem; color: var(--color-de-texto); }
+.proyectos__link { color: var(--color-de-link); font-weight: bold; align-self: flex-start; border-bottom: 1px solid transparent; }
+.proyectos__link span { margin-left: .4rem; transition: transform .2s; display: inline-block; }
+.proyectos__link:hover span { transform: translate(3px,-3px); }
+
+.carrusel__control {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    background: rgba(15,23,32,.94);
+    border: 1px solid rgba(118,171,174,.4);
+    color: var(--color-de-texto);
+    font-size: 1.2rem;
+}
+.carrusel__control:hover { background: var(--color-de-link); color: #0f1720; }
+.carrusel__control--prev { left: -25px; }
+.carrusel__control--next { right: -25px; }
+.carrusel__dots { display: flex; justify-content: center; gap: .65rem; margin-top: 1.25rem; }
+.carrusel__dot { width: 9px; height: 9px; padding: 0; margin: 0; border-radius: 999px; border: 0; background: #536268; transition: width .35s, background .35s; }
+.carrusel__dot--active { width: 34px; background: var(--color-de-link); }
+
+@media (max-width: 768px) {
+    .presentacion { min-height: 0; }
+    .presentacion__foto { width: 180px; height: 180px; }
+    .proyectos__viewport { border-radius: 18px; }
+    .proyectos__contenedor { grid-template-columns: 1fr; }
+    .proyecto__imagen { height: 260px; }
+    .proyectos__contenido { padding: 1.4rem; }
+    .carrusel__control { top: auto; bottom: 70px; transform: none; }
+    .carrusel__control--prev { left: 12px; }
+    .carrusel__control--next { right: 12px; }
+    .footer > .proyecto__icono { width: 100px; max-height: 55px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .habilidades__elemento, .tools__elemento, .formacion__icono { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+    .habilidades__elemento:hover, .tools__elemento:hover { border-color: rgba(118,171,174,.55); box-shadow: 0 18px 35px rgba(0,0,0,.18); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    body.reveal-ready > section,
+    section.section-visible h2,
+    section.section-visible > ul,
+    section.section-visible > .formacion_contenedor,
+    section.section-visible > .proyectos__encabezado {
+        opacity: 1;
+        filter: none;
+        transform: none;
+        animation: none;
+        transition: none;
+    }
 }
 
 /* ------------------------------ Responsividad ---------------------------------------*/
